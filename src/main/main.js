@@ -20,6 +20,8 @@ const { app, BrowserWindow } = electron;
 const appRoot = path.resolve(__dirname, '../..'); // app/ directory
 const distPath = path.join(appRoot, 'dist'); // app/dist/ directory
 
+require('electron-reload')(distPath); //Hot REload
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the javascript object is GCed.
 let mainWindow = null;
